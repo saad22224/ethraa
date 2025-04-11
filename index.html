@@ -22,6 +22,71 @@
   <link rel="stylesheet" href="assets/css/main.css">
 
 <style>
+
+.fixed-container {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .whatsapp-button {
+            width: 50px;
+            height: 50px;
+            background-color: #25D366; /* لون أخضر واتساب */
+            color: #FFFFFF; /* الأبيض المريح */
+            border-radius: 50%; /* زر دائري */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1); /* تكبير بسيط عند التمرير */
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* ظل أكبر */
+        }
+
+        .fixed-container span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            margin-right: 12px; /* مسافة بين النص والزر */
+            color: #333;
+            background-color: #fff;
+            padding: 6px 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            white-space: nowrap; /* منع النص من الالتفاف */
+        }
+
+        @keyframes shake {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-4px);
+            }
+            75% {
+                transform: translateX(4px);
+            }
+        }
+
+        .shake {
+            animation: shake 0.5s ease infinite;
+            animation-iteration-count: 1;
+        }
+
+        /* إعادة تشغيل الهزة كل 10 ثوانٍ */
+        @keyframes shakeInterval {
+            0% { animation: shake 0.5s ease 1; }
+            100% { animation: none; }
+        }
+
   @media(max-width:767px){
     .hero-area4{
       height: 50% !important;
@@ -283,7 +348,7 @@
 
               <div class="header2-buttons">
                 <div class="button" >
-                  <a class="theme-btn1" style="background-color: #19326A !important;" href="contact.html"> تواصل معنا <span><i
+                  <a class="theme-btn1" style="background-color: #19326A !important;" href="https://wa.me/+905368500667"> تواصل معنا <span><i
                         class="fa-solid fa-arrow-right"></i></span></a>
                 </div>
               </div>
@@ -328,7 +393,7 @@
       </ul>
       <div class="header2-buttons">
         <div class="button">
-          <a class="theme-btn1" href="contact.html"  style="background-color: #19326A !important;" > تواصل معنا <span><i class="fa-solid fa-arrow-right"></i></span></a>
+          <a class="theme-btn1" href="https://wa.me/+905368500667"  style="background-color: #19326A !important;" > تواصل معنا <span><i class="fa-solid fa-arrow-right"></i></span></a>
         </div>
       </div>
     </div>
@@ -482,7 +547,7 @@
               </div>
 
               <div class="" data-aos="fade-left" data-aos-duration="900">
-                <a class="theme-btn10" href="about.html">اعرف المزيد <span><i
+                <a class="theme-btn10" href="https://wa.me/+905368500667">اعرف المزيد <span><i
                       class="fa-solid fa-arrow-right"></i></span></a>
               </div>
             </div>
@@ -734,7 +799,8 @@
           <div class="col-lg-4 col-md-6 col-12 fav">
             <div class="single-footer-items footer-logo-area">
               <div class="footer-logo">
-                <img src="assets\img\about\WhatsApp Image 2025-04-11 at 2.43.34 PM.jpeg" alt="جبقجي لتجارة السيارات" style="max-width: 100%; height: auto; width: 200px;">
+                <img src="assets\img\about\WhatsApp Image 2025-04-11 at 2.43.34 PM.jpeg"
+                 alt="جبقجي لتجارة السيارات" style="max-width: 100%; height: 150px; width: 200px;">
               </div>
               <div class="space20"></div>
               <div class="heading1-w">
@@ -742,8 +808,8 @@
                   السيارات الكورية.</p>
               </div>
               <ul class="social-icon" style="margin-top: 15px;">
-                <li><a href="#"><i class="fa-brands fa-facebook-f" style="color: #fff;"></i></a></li>
-                <li><a href="#"><i class="fa-brands fa-whatsapp" style="color: #fff;"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook-f" style="color: #fff; font-size: 20px;"></i></a></li>
+                <li><a target="_blank" href="https://wa.me/+905368500667"><i class="fa-brands fa-whatsapp" style="color: #fff;"></i></a></li>
                 <li><a  target="_blank" href="https://telegram.me/Ethraawalet"><i class="fa-brands fa-telegram" style="color: #fff;"></i></a></li>
                 <li><a href="#"><i class="fa-brands fa-instagram" style="color: #fff;"></i></a></li>
               </ul>
@@ -754,10 +820,10 @@
             <div class="single-footer-items pl-3 move-left">
               <h3 style="color: #fff;">استكشف</h3>
               <ul class="menu-list">
-                <li><a href="#hero" style="color: #ccc;">الرئيسية</a></li>
-                <li><a href="#why" style="color: #ccc;">لماذا نحن</a></li>
-                <li><a href="#cars" style="color: #ccc;">السيارات</a></li>
-                <li><a href="#contact" style="color: #ccc;">تواصل معنا</a></li>
+                <li><a class="" href="#hero">الرئيسية</a></li>
+                <li><a class="" href="#about">من نحن</a></li>
+                <li><a class="" href="#faqs">الأسئلة الشائعة</a></li>
+                <li><a class="" href="#contact">تواصل معنا</a></li>
               </ul>
             </div>
           </div>
@@ -783,14 +849,14 @@
                 </div>
               </div>
 
-              <div class="contact-box">
+              <!-- <div class="contact-box">
                 <div class="icon">
                   <img src="assets/img/icons/footer-icon3.png" alt="الموقع">
                 </div>
                 <div class="pera">
                   <a href="#" style="color: #ccc;">شارع 8502، منطقة الاستيراد، كوريا الجنوبية</a>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -813,6 +879,11 @@
       </div>
     </div>
 
+
+    <div class="fixed-container">
+      <a href="https://wa.me/+905368500667" target="_blank" class="whatsapp-button">
+        <i class="fa-brands fa-whatsapp" style="color: #fff;"></i>
+      </a>
 
     <!--===== FOOTER AREA END =======-->
 
