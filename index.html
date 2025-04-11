@@ -28,6 +28,9 @@
       padding-bottom: 0 !important;
       min-height: 700px !important;
     }
+    .kkkk{
+      margin-top: 50px !important;
+    }
   }
 </style>
 
@@ -358,7 +361,7 @@
         </div>
       </div>
 
-      <div class="row d-none d-lg-block">
+      <!-- <div class="row d-none d-lg-block">
         <div class="col-lg-12">
           <div  class="images-all" style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
             <div class="image1 animate1 overlay-anim">
@@ -379,8 +382,34 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
+     
+      <!-- <h2 style="color: #00bcd4; font-size: 30px; margin-bottom: 25px;">حاسبة نسبة الربح</h2> -->
+      <!-- <p style="color: #ccc; font-size: 17px; margin-bottom: 40px;">
+        أدخل المبلغ الذي تريد استثماره، واختر الباقة، وسنحسب لك الربح
+      </p> -->
+
+      <div class="kkkk"  data-aos="fade-left"  data-aos-duration="900"
+        style="max-width: 500px; margin: auto; margin-top: 200px; background-color: #0a0f14; padding: 30px; border-radius: 15px; box-shadow: 0 0 15px rgba(0,0,0,0.3);">
+        <input id="amount" type="number" placeholder="أدخل المبلغ (بالدولار)"
+          style="width: 100%; padding: 15px; border-radius: 8px; border: none; font-size: 18px; margin-bottom: 20px; text-align: right;" />
+
+        <select id="package"
+          style="width: 100%; padding: 15px; border-radius: 8px; border: none; font-size: 18px; margin-bottom: 20px;">
+          <option value="1">الخطة الأولى (50 دولار)</option>
+          <option value="2">الخطة الثانية (100 دولار)</option>
+          <option value="3">الخطة الثالثة (500 دولار)</option>
+          <option value="4">الخطة الرابعة (1000 دولار)</option>
+        </select>
+
+        <button onclick="calculateProfit()"
+          style="background-color: #00bcd4; color: #fff; padding: 14px 25px; border: none; font-size: 18px; border-radius: 8px; cursor: pointer; width: 100%;">
+          احسب الربح
+        </button>
+
+        <div id="result" style="margin-top: 25px; font-size: 20px; color: #00e676;"></div>
+      </div>
 
 
 
@@ -647,34 +676,7 @@
 
 
 
-    <section data-aos="fade-left"  data-aos-duration="900"
-      style="background-color: #1a2a3a; color: white; padding: 80px 20px; font-family: 'Segoe UI', Tahoma, sans-serif; direction: rtl; text-align: center;">
-      <h2 style="color: #00bcd4; font-size: 30px; margin-bottom: 25px;">حاسبة نسبة الربح</h2>
-      <p style="color: #ccc; font-size: 17px; margin-bottom: 40px;">
-        أدخل المبلغ الذي تريد استثماره، واختر الباقة، وسنحسب لك الربح
-      </p>
-
-      <div
-        style="max-width: 500px; margin: auto; background-color: #0a0f14; padding: 30px; border-radius: 15px; box-shadow: 0 0 15px rgba(0,0,0,0.3);">
-        <input id="amount" type="number" placeholder="أدخل المبلغ (بالدولار)"
-          style="width: 100%; padding: 15px; border-radius: 8px; border: none; font-size: 18px; margin-bottom: 20px; text-align: right;" />
-
-        <select id="package"
-          style="width: 100%; padding: 15px; border-radius: 8px; border: none; font-size: 18px; margin-bottom: 20px;">
-          <option value="1">الخطة الأولى (50 دولار)</option>
-          <option value="2">الخطة الثانية (100 دولار)</option>
-          <option value="3">الخطة الثالثة (500 دولار)</option>
-          <option value="4">الخطة الرابعة (1000 دولار)</option>
-        </select>
-
-        <button onclick="calculateProfit()"
-          style="background-color: #00bcd4; color: #fff; padding: 14px 25px; border: none; font-size: 18px; border-radius: 8px; cursor: pointer; width: 100%;">
-          احسب الربح
-        </button>
-
-        <div id="result" style="margin-top: 25px; font-size: 20px; color: #00e676;"></div>
-      </div>
-    </section>
+  
 
     <script>
       function calculateProfit() {
